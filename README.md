@@ -8,27 +8,27 @@ Native iOS app for the Depression Dashboard, built with SwiftUI.
 
 ## Key Features
 
-- Overview dashboard with depression score and breakdown by team
-- Recent games list with scores, opponents, and game details
-- Upcoming events calendar with date and time information
-- Pull-to-refresh functionality on all screens
-- Dark theme UI matching the web dashboard
-- Error handling and loading states
+- View your overall depression score and see how each team is contributing to it
+- Check out recent game results with scores and see if your teams won or lost
+- See what games are coming up so you can prepare yourself emotionally
+- Pull down to refresh and get the latest data whenever you want
+- Dark theme that's easy on the eyes
+- Handles errors gracefully so you're not left staring at a broken screen
 
 ## Challenges Faced
 
-- Swift concurrency and actor isolation issues resolved with proper Sendable types
-- API integration requiring consistent data models between backend and iOS
-- Date parsing across different formats and timezone handling
-- UI/UX design to match web dashboard while maintaining native iOS feel
+- Had to figure out Swift's concurrency system and how to properly isolate actors to avoid crashes
+- Making sure the data models matched between the backend and iOS app was trickier than expected
+- Dates came in all sorts of formats from the API, so parsing them correctly took some work
+- Tried to match the web dashboard's look while still feeling like a native iOS app
 
 ## Future Additions
 
-- Push notifications for important game results
-- Widget support for home screen
-- Historical trend charts
-- Offline mode with cached data
-- Apple Watch companion app
+- Get notified when something big happens (like a rivalry loss)
+- Add a widget to your home screen so you can check your depression level at a glance
+- Show charts of how depressed you've been over time
+- Work offline so you can check scores even without internet
+- Maybe build an Apple Watch app so you can check your depression level on your wrist
 
 ## License
 
