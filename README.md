@@ -4,13 +4,9 @@ Native iOS app for the Depression Dashboard, built with SwiftUI.
 
 ## Screenshots/Demo
 
-_Add screenshots or demo GIFs of your app here_
-
-<!-- Example format:
 ![Overview Screen](screenshots/overview.png)
-![Games Screen](screenshots/games.png)
+![Recent Games Screen](screenshots/games.png)
 ![Upcoming Events Screen](screenshots/upcoming.png)
--->
 
 ## Key Features
 

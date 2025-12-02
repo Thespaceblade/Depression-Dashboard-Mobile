@@ -95,3 +95,6 @@ iOSInjectionProject/
 # App-specific
 *.log
 
+# Screenshots (keep directory, ignore if needed)
+# screenshots/*.png
+
