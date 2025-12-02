@@ -19,7 +19,7 @@ Native iOS app for the Depression Dashboard, built with SwiftUI.
 ## Setup
 
 1. Clone this repository
-2. Open `Depression-Dashboard-iOs.xcodeproj` in Xcode
+2. Open `Depression-Dashboard-iOS.xcodeproj` in Xcode
 3. Build and run on simulator or device
 
 ## API
@@ -45,8 +45,8 @@ The app connects to the Depression Dashboard API hosted on Railway:
 ## Project Structure
 
 ```
-Depression-Dashboard-iOs/
-├── Depression-Dashboard-iOs/
+Depression-Dashboard-iOS/
+├── Depression-Dashboard-iOS/
 │   ├── APIClient.swift          # API client actor
 │   ├── Models.swift              # Data models
 │   ├── Depression_Dashboard_iOsApp.swift  # App entry point
@@ -55,8 +55,8 @@ Depression-Dashboard-iOs/
 │   ├── UpcomingView.swift        # Upcoming events screen
 │   ├── RootTabView.swift         # Tab navigation
 │   └── Assets.xcassets/          # App icons and assets
-├── Depression-Dashboard-iOsTests/
-└── Depression-Dashboard-iOsUITests/
+├── Depression-Dashboard-iOSTests/
+└── Depression-Dashboard-iOSUITests/
 ```
 
 ## Development
@@ -65,10 +65,10 @@ Depression-Dashboard-iOs/
 
 ```bash
 # Unit tests
-xcodebuild test -scheme Depression-Dashboard-iOs -destination 'platform=iOS Simulator,name=iPhone 15'
+xcodebuild test -scheme Depression-Dashboard-iOS -destination 'platform=iOS Simulator,name=iPhone 15'
 
 # UI tests
-xcodebuild test -scheme Depression-Dashboard-iOs -destination 'platform=iOS Simulator,name=iPhone 15' -only-testing:Depression-Dashboard-iOsUITests
+xcodebuild test -scheme Depression-Dashboard-iOS -destination 'platform=iOS Simulator,name=iPhone 15' -only-testing:Depression-Dashboard-iOSUITests
 ```
 
 ## Deployment
