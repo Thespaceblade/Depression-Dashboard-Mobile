@@ -2,13 +2,41 @@
 
 Native iOS app for the Depression Dashboard, built with SwiftUI.
 
-## Features
+## Screenshots/Demo
 
-- **Overview**: View overall depression score with breakdown by team
-- **Recent Games**: Browse recent game results with scores and details
-- **Upcoming Events**: See upcoming games and events
+_Add screenshots or demo GIFs of your app here_
+
+<!-- Example format:
+![Overview Screen](screenshots/overview.png)
+![Games Screen](screenshots/games.png)
+![Upcoming Events Screen](screenshots/upcoming.png)
+-->
+
+## Key Features
+
+### Overview Dashboard
+- View overall depression score with emoji and color-coded levels
+- See breakdown by team with individual depression points
+- Real-time score updates with timestamp
+- Visual progress bar showing depression level
+
+### Recent Games
+- Browse recent game results with scores and details
+- Color-coded results (green for wins, red for losses, yellow for placements)
+- Game details including opponent, date/time, home/away status
+- Overtime and rivalry game indicators
+
+### Upcoming Events
+- View upcoming games and events
+- Date and time formatting with timezone support
+- Home/away indicators
+- Event type classification
+
+### User Experience
 - **Pull-to-Refresh**: Refresh data on any screen
 - **Dark Theme**: Beautiful dark UI matching the web dashboard
+- **Native Performance**: Smooth animations and responsive UI
+- **Error Handling**: Graceful error messages and loading states
 
 ## Requirements
 
@@ -83,6 +111,36 @@ xcodebuild test -scheme Depression-Dashboard-iOS -destination 'platform=iOS Simu
 
 1. Follow TestFlight steps
 2. Submit for App Store review
+
+## Challenges Faced
+
+### Swift Concurrency
+- Initial challenges with actor isolation and MainActor conformance
+- Resolved by using proper `Sendable` types and actor-based API client
+- Implemented thread-safe network requests using Swift's concurrency model
+
+### API Integration
+- Ensuring consistent data models between backend and iOS app
+- Handling optional fields and date parsing across different formats
+- Implementing proper error handling for network failures
+
+### UI/UX Design
+- Creating a cohesive dark theme that matches the web dashboard
+- Implementing pull-to-refresh functionality across all views
+- Designing intuitive navigation with tab-based interface
+
+## Future Additions
+
+- [ ] Push notifications for important game results
+- [ ] Widget support for home screen quick view
+- [ ] Historical trend charts showing depression score over time
+- [ ] Team-specific detail views with extended statistics
+- [ ] Offline mode with cached data
+- [ ] Apple Watch companion app
+- [ ] Share functionality for depression scores
+- [ ] Customizable color themes
+- [ ] Haptic feedback for score changes
+- [ ] App Store optimization and TestFlight beta testing
 
 ## License
 
