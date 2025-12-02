@@ -14,29 +14,12 @@ _Add screenshots or demo GIFs of your app here_
 
 ## Key Features
 
-### Overview Dashboard
-- View overall depression score with emoji and color-coded levels
-- See breakdown by team with individual depression points
-- Real-time score updates with timestamp
-- Visual progress bar showing depression level
-
-### Recent Games
-- Browse recent game results with scores and details
-- Color-coded results (green for wins, red for losses, yellow for placements)
-- Game details including opponent, date/time, home/away status
-- Overtime and rivalry game indicators
-
-### Upcoming Events
-- View upcoming games and events
-- Date and time formatting with timezone support
-- Home/away indicators
-- Event type classification
-
-### User Experience
-- **Pull-to-Refresh**: Refresh data on any screen
-- **Dark Theme**: Beautiful dark UI matching the web dashboard
-- **Native Performance**: Smooth animations and responsive UI
-- **Error Handling**: Graceful error messages and loading states
+- Overview dashboard with depression score and breakdown by team
+- Recent games list with scores, opponents, and game details
+- Upcoming events calendar with date and time information
+- Pull-to-refresh functionality on all screens
+- Dark theme UI matching the web dashboard
+- Error handling and loading states
 
 ## Requirements
 
@@ -59,33 +42,6 @@ The app connects to the Depression Dashboard API hosted on Railway:
   - `GET /api/recent-games` - Get recent game results
   - `GET /api/upcoming-events` - Get upcoming events
   - `POST /api/refresh` - Trigger data refresh
-
-## Architecture
-
-- **APIClient**: Actor-based API client for thread-safe network requests
-- **Models**: Codable data models matching the API response structure
-- **Views**: SwiftUI views for each screen
-  - `OverviewView`: Main dashboard with score and breakdown
-  - `GamesView`: List of recent games
-  - `UpcomingView`: List of upcoming events
-  - `RootTabView`: Tab navigation container
-
-## Project Structure
-
-```
-Depression-Dashboard-iOS/
-├── Depression-Dashboard-iOS/
-│   ├── APIClient.swift          # API client actor
-│   ├── Models.swift              # Data models
-│   ├── Depression_Dashboard_iOsApp.swift  # App entry point
-│   ├── OverviewView.swift        # Overview screen
-│   ├── GamesView.swift           # Recent games screen
-│   ├── UpcomingView.swift        # Upcoming events screen
-│   ├── RootTabView.swift         # Tab navigation
-│   └── Assets.xcassets/          # App icons and assets
-├── Depression-Dashboard-iOSTests/
-└── Depression-Dashboard-iOSUITests/
-```
 
 ## Development
 
@@ -114,33 +70,18 @@ xcodebuild test -scheme Depression-Dashboard-iOS -destination 'platform=iOS Simu
 
 ## Challenges Faced
 
-### Swift Concurrency
-- Initial challenges with actor isolation and MainActor conformance
-- Resolved by using proper `Sendable` types and actor-based API client
-- Implemented thread-safe network requests using Swift's concurrency model
-
-### API Integration
-- Ensuring consistent data models between backend and iOS app
-- Handling optional fields and date parsing across different formats
-- Implementing proper error handling for network failures
-
-### UI/UX Design
-- Creating a cohesive dark theme that matches the web dashboard
-- Implementing pull-to-refresh functionality across all views
-- Designing intuitive navigation with tab-based interface
+- Swift concurrency and actor isolation issues resolved with proper Sendable types
+- API integration requiring consistent data models between backend and iOS
+- Date parsing across different formats and timezone handling
+- UI/UX design to match web dashboard while maintaining native iOS feel
 
 ## Future Additions
 
-- [ ] Push notifications for important game results
-- [ ] Widget support for home screen quick view
-- [ ] Historical trend charts showing depression score over time
-- [ ] Team-specific detail views with extended statistics
-- [ ] Offline mode with cached data
-- [ ] Apple Watch companion app
-- [ ] Share functionality for depression scores
-- [ ] Customizable color themes
-- [ ] Haptic feedback for score changes
-- [ ] App Store optimization and TestFlight beta testing
+- Push notifications for important game results
+- Widget support for home screen
+- Historical trend charts
+- Offline mode with cached data
+- Apple Watch companion app
 
 ## License
 
